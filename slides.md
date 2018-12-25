@@ -2,7 +2,7 @@
 
  ## レガシーソフトウェア(序章)
 
- [mantaroh(@_mantaroh_)](https://twitter.com/_mantaroh_)
+ [mantaroh(@\_mantaroh\_)](https://twitter.com/_mantaroh_)
 
 >>>
 
@@ -24,7 +24,7 @@
 
 ---
 
- # はじめに少し告知
+ # 今日伝えたいこと①
 
 >>>
 
@@ -34,6 +34,10 @@
  ## 詳細は「かごもく」！
 
 ---
+
+ # 今日伝えたいこと②
+
+>>>
 
  # レガシーソフト
  # ウェアとは？
@@ -47,43 +51,11 @@
 
  # 〜完〜
 
->>>
-
- ## アンハッピーな開発
- * 利害関係者が多く、仕様がなかなか決まらない
- * 現在のドキュメント=ソースコード
- * 開発前に動作調査が必要
- * バグ混入に気づきにくい
- * 毎日のように市場障害と戦う
- * 秘伝の技が多い
-
->>>
-
-```
-＿人人人人人人人人人人人人人人人人人人＿
-＞　本来のシステム開発に集中できない　＜
-＞　          疲弊が漂う        　＜
-￣Y^Y^Y^Y^Y^Y^Y^Y^Y^Y^Y^Y^Y^Y^Y￣
-```
-
->>>
-
- ## ハッピーな開発
- * 新しい技術にチャンレジ出来る
- * 標準的な技術を使っている
- * 開発環境構築・ビルド・リリースが早い
- * 本来の設計やコーディングに集中できる
-
->>>
-
- ## ソフトウェアエンジニア
- # = 知的生産者
-
 ---
 
   # レガシーあるある
 
-  ### 注:過去の会社をディスってるわけじゃないです
+  ### 注:ディスりではなく経験上の問題だったことです
 
 >>>
 
@@ -111,7 +83,7 @@
 
 >>>
 
-<p style='color: red'>Qiita say 'この記事は3年以上経過しています'</p>
+![image](images/qiita.png)
 
 >>>
 
@@ -140,8 +112,8 @@
 
  個人的な感想：
  * ソフトウエアエンジニアが多くのツールを同時に扱うとパフォーマンスが下がる
- * 開発設計書がソースに近くないと剥離していく
- * そもそもドキュメントのレベルがまちまち
+ * 開発設計書がソースに近くないと剥離しがち
+ * ~~Emacs 1つで設計・開発したい~~
 
 >>>
 
@@ -191,3 +163,170 @@ function getKUBUNString() {
 ```
 
 >>>
+
+![image](images/release.jpg)
+
+---
+
+こうならないための、  
+ここからは個人的な経験
+
+---
+
+# RIC●H 複合機
+
+>>>
+
+## 20年選手のシステム
+
+### ハード制約が大きい
+### リリースに多大な工数を要する
+
+>>>
+
+## やったこと
+
+* Jenkins によるビルド自動化
+* 新規コードにはユニットテスト追加
+* 静的解析によるコードメトリクス
+* リリース時のテスト自動化
+
+>>>
+
+## 結果
+
+* 開発スピード↑のために CI は必須
+* プロダクトの性質に合わせた運用必要
+
+>>>
+
+# M●zilla Firef●x
+
+>>>
+
+## 20年選手のプロダクト
+
+### 数千人が関わってきた
+### 古いコードが生きている
+
+>>>
+
+## やったこと
+
+* 1人のソフトウェアエンジニアとして参戦
+* たくさんのバグを生成
+
+>>>
+
+## CI / Testing / Bug tracking は必須
+
+* Bugzilla まじ神
+* テストが多く影響範囲がわかりやすい
+
+---
+
+ ### 具体例
+ ### Google / Mozilla /Apple etc..
+
+---
+
+# Google Chromium
+
+>>>
+
+* LUCI という CI ツールを利用
+* 裏ではビルド・テストするクラウドサーバー(GOMAサーバー)
+
+[Chromium Main Console](https://ci.chromium.org/p/chromium/g/main/console)
+
+>>>
+
+![image](images/chromium.png)
+
+---
+
+# Mozilla Firefox
+
+>>>
+
+* 独自の CI ツールを利用
+* Treeherder で閲覧
+* 全てのツリーのコミットを検知してビルド・テスト
+* Try ツリーという試験的なツリーではビルド・テストを選択できる
+
+[Mozilla Treeherder](https://treeherder.mozilla.org/)
+
+>>>
+
+![image](images/mozilla.png)
+
+---
+
+# Apple Webkit
+
+>>>
+
+* buildbot が存在
+* コミットごとにビルド・テスト
+
+[Main Console](https://build.webkit.org/console)
+
+>>>
+
+![image](images/apple.png)
+
+---
+
+# Eclipse RAP
+
+>>>
+
+* Gerrit (レビューツール)から検知して CI bot が動く
+* Jenkins を用いてビルドを管理
+* Jasmine にて手動テストも実施
+
+[Eclipse RAP Jenkins](https://hudson.eclipse.org/rap/job/rap-3.1-runtime/)
+
+>>>
+
+![image](images/eclipse.png)
+
+---
+
+# GNOME GPARTED
+
+>>>
+
+* GNOME は最近 GitLab へ移行
+* GitLab CI を用いてビルド/テストを管理
+
+[GParted GitLab CI](https://gitlab.gnome.org/GNOME/gparted/-/jobs)
+
+>>>
+
+![image](images/gnome.png)
+
+---
+
+レガシーソフトウェアと戦う武器
+
+>>>
+
+* Jenkins や Travis などの CI ツール
+* 自動単体テスト
+* トラッキングシステム(全文検索)
+* 静的解析
+
+>>>
+
+ ## 「かごもく」にて、
+ ## 「レガシーソフトウェア」を
+ ## 扱った勉強会を開催します。
+ ## 詳細は「かごもく」！
+
+---
+
+ ## ご静聴
+ ## ありがとうございました。
+
+ ### @_mantaroh_
