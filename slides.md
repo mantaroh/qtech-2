@@ -14,7 +14,7 @@
 
  吉永 満太朗
 
- 所属: Systec Co.Ltd.,
+ 所属: Systec Co.,Ltd
 
  肩書：Software engineer
 
