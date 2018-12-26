@@ -324,4 +324,4 @@ function getKUBUNString() {
  ## ご静聴
  ## ありがとうございました。
 
- ### @_mantaroh_
+ ### @\_mantaroh\_
