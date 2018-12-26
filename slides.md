@@ -24,6 +24,14 @@
 
  肩書：共同CEO 兼 CFO
 
+>>>
+
+ 肩書：共同CEO 兼 CFO
+ 
+ CEO(Chief Entertainment Officer)
+ 
+ CFO(Chief Funny Officer)
+
 ---
 
  # 今日伝えたいこと①
@@ -47,7 +55,8 @@
 >>>
 
  # これを見てね
- ![レガシーソフトウェア改善ガイド](images/book.jpg)
+
+![レガシーソフトウェア改善ガイド](images/book.jpg)
 
 >>>
 
@@ -190,8 +199,9 @@ function getKUBUNString() {
 
 >>>
 
-## CI / Testing / Bug tracking は必須
+## 結果
 
+* CI / Testing / Bug tracking は必須
 * Bugzilla まじ神
 * テストが多く影響範囲がわかりやすい
 
