@@ -26,11 +26,13 @@
 
 >>>
 
+### 家庭
+
  肩書：共同CEO 兼 CFO
- 
- CEO(Chief Entertainment Officer)
- 
- CFO(Chief Funny Officer)
+
+ CEO(Child Entertainment Officer)
+
+ CFO(Child Funny Officer)
 
 ---
 
