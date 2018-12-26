@@ -34,6 +34,15 @@
 
 ---
 
+ # 発表の前に
+
+>>>
+
+ # Firefox 使って！
+ ![images](images/firefox.png)
+
+---
+
  # 今日伝えたいこと①
 
 >>>
